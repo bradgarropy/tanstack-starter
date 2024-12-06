@@ -3,12 +3,7 @@ import {createFileRoute, useRouter} from "@tanstack/react-router"
 import {createServerFn} from "@tanstack/start"
 
 import type {User} from "../utils/users"
-import {
-    createUser,
-    deleteUser,
-    getUsers,
-    updateUser,
-} from "../utils/users"
+import {createUser, deleteUser, getUsers, updateUser} from "../utils/users"
 
 const loadUsersFn = createServerFn({
     method: "GET",
@@ -22,7 +17,6 @@ const deleteUserFn = createServerFn({method: "POST"})
         return {email}
     })
     .handler(async ctx => {
-        await new Promise(resolve => setTimeout(resolve, 3000))
         return deleteUser(ctx.data.email)
     })
 
@@ -59,7 +53,6 @@ export const Route = createFileRoute("/")({
 function Home() {
     const router = useRouter()
     const {users} = Route.useLoaderData()
-    console.log(router)
 
     return (
         <>

@@ -22,7 +22,8 @@
         "eslint-plugin-react-hooks": "^5.1.0",
         "eslint-plugin-simple-import-sort": "^12.0.0",
         "prettier": "^3.4.2",
-        "typescript": "^5.7.2"
+        "typescript": "^5.7.2",
+        "vite": "^6.0.3"
     },
     "name": "tanstack-start",
     "version": "1.0.0",
